@@ -28,3 +28,12 @@ Instaladas el 2026-08-25.
 `fish-audio/` es una skill escrita a medida a partir de la **referencia pública de la API de Fish Audio**
 (https://docs.fish.audio), no un repo de terceros empaquetado. Lee la clave desde la variable de entorno
 `FISH_AUDIO_API_KEY` — nunca contiene ni debe contener la clave. Añadida el 2026-08-26.
+
+## hyperframes (HeyGen) — 20 skills
+
+Instaladas desde https://github.com/heygen-com/hyperframes (Apache-2.0, v0.8.15).
+Se extrajeron solo las skills de usuario de `skills/` (router `hyperframes` + skills de
+dominio + workflows), aplanadas como hermanas para preservar sus referencias `../../<skill>/`.
+NO se instaló el `.claude/settings.json` del repo (define hooks pre-commit) ni el monorepo
+(`packages/`, 202MB). Para renderizar video, las skills usan el CLI `npx hyperframes`
+(paquete npm, requiere red). Licencia en `hyperframes-LICENSE`. Añadidas el 2026-08-27.
