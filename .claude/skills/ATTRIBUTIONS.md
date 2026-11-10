@@ -37,3 +37,11 @@ dominio + workflows), aplanadas como hermanas para preservar sus referencias `..
 NO se instaló el `.claude/settings.json` del repo (define hooks pre-commit) ni el monorepo
 (`packages/`, 202MB). Para renderizar video, las skills usan el CLI `npx hyperframes`
 (paquete npm, requiere red). Licencia en `hyperframes-LICENSE`. Añadidas el 2026-08-27.
+
+## fluxo-de-edicao (Lucas Leite)
+
+Instalada desde https://github.com/LeiteZ/fluxo-de-edicao (MIT, commit 703561d).
+Skill en portugués que guía a montar un flujo de edición de video propio (8 etapas:
+iniciar/preparar, cortes, motion-mapa, assets, motion-render, cámara, sfx) y escribe
+las skills de cada etapa más una skill maestra. Solo archivos markdown, sin scripts.
+Licencia en `fluxo-de-edicao/LICENSE`. Añadida el 2026-11-10.
