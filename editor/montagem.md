@@ -17,7 +17,7 @@ Fase atual: 2 (entrevista) · Atualizado em 2026-11-10
 - Tipo y formato: marca personal (persona hablando a cámara, estilo creador). Horizontal 16:9 para YouTube + vertical 9:16.
 - Cliente: el material crudo lo envía la empresa que contrata; los videos son para ella (un perfil de estilo por cliente).
 - Editor: todo pasa por Claude. Prueba comparativa con el mismo clip crudo: (A) edición propia
-  FFmpeg + HyperFrames vs. (B) Descript (conector, a conectar por el usuario). Se elige el mejor o un híbrido.
+  FFmpeg + HyperFrames vs. (B) Descript (conector conectado y verificado el 2026-11-10; Agent Underlord edita por instrucciones; exporta FCPXML/Premiere/DaVinci XML; publica con enlace de descarga). Se elige el mejor o un híbrido.
 - Meta de calidad: edición profesional, no "automática genérica".
 - Pastas: ferramentas `editor/` en este repo; projeto <pendiente>
 - Transcrição: probablemente ElevenLabs (nube, tiempo por palabra) — <confirmar>
@@ -39,4 +39,4 @@ Fase atual: 2 (entrevista) · Atualizado em 2026-11-10
 - [ ] regras comuns
 
 ## Próximo passo
-Decisión 2: tipo de video, formato, duración y origen del material.
+Prueba comparativa: falta el clip crudo (1–3 min) y 3–5 referencias de estilo. Pendiente: vertical = video completo 9:16 o shorts.
