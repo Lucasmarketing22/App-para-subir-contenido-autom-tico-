@@ -16,7 +16,9 @@ Fase atual: 2 (entrevista) · Atualizado em 2026-11-10
 - Objetivo: edición lo más automática posible; luego entrega a clientes y/o publicación automática.
 - Tipo y formato: marca personal (persona hablando a cámara, estilo creador). Horizontal 16:9 para YouTube + vertical 9:16.
 - Cliente: el material crudo lo envía la empresa que contrata; los videos son para ella (un perfil de estilo por cliente).
-- Editor conectable: evaluando Descript (conector disponible, no conectado) vs. render propio.
+- Editor: todo pasa por Claude. Prueba comparativa con el mismo clip crudo: (A) edición propia
+  FFmpeg + HyperFrames vs. (B) Descript (conector, a conectar por el usuario). Se elige el mejor o un híbrido.
+- Meta de calidad: edición profesional, no "automática genérica".
 - Pastas: ferramentas `editor/` en este repo; projeto <pendiente>
 - Transcrição: probablemente ElevenLabs (nube, tiempo por palabra) — <confirmar>
 - Notas faladas: <pendiente>
