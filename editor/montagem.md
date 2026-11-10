@@ -24,13 +24,13 @@ Fase atual: 2 (entrevista) · Atualizado em 2026-11-10
 - Notas faladas: <pendiente>
 - Animação: <pendiente>
 - Câmera: <pendiente>
-- Som: <pendiente>
+- Som: el usuario pasará una plataforma de sonidos (revisar acceso y licencia). En Drive ya existe la carpeta "Audios para Claude".
 - Revisões: <pendiente>
 - Entrega/publicação: <pendiente>
 - Nomes: prefixo <…>; skill mestra /<…>
 
 ## Perfil
-- <pendiente>
+- Referencias: Drive "INSPIRACION" = motion graphics (ya existe). El usuario creará una carpeta nueva de referencias de marca personal (sugerido: "INSPIRACION MARCA PERSONAL").
 
 ## Fluxo aprovado
 <pendiente>
