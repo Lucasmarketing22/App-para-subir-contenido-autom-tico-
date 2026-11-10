@@ -14,7 +14,9 @@ Fase atual: 2 (entrevista) · Atualizado em 2026-11-10
 ## Decisiones
 - Revisión: video terminado (sin programa de edición). Render en la nube y ajustes por chat.
 - Objetivo: edición lo más automática posible; luego entrega a clientes y/o publicación automática.
-- Tipo y formato: <pendiente>
+- Tipo y formato: marca personal (persona hablando a cámara, estilo creador). Horizontal 16:9 para YouTube + vertical 9:16.
+- Cliente: el material crudo lo envía la empresa que contrata; los videos son para ella (un perfil de estilo por cliente).
+- Editor conectable: evaluando Descript (conector disponible, no conectado) vs. render propio.
 - Pastas: ferramentas `editor/` en este repo; projeto <pendiente>
 - Transcrição: probablemente ElevenLabs (nube, tiempo por palabra) — <confirmar>
 - Notas faladas: <pendiente>
