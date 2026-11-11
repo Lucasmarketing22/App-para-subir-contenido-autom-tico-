@@ -40,3 +40,13 @@ Fase atual: 2 (entrevista) · Atualizado em 2026-11-10
 
 ## Próximo passo
 Prueba comparativa: falta el clip crudo (1–3 min) y 3–5 referencias de estilo. Skill genhq-infinite-angle instalada (multicámara opcional vía Higgsfield/Seedance).
+
+## Prueba comparativa 1 — "como combinar" (Cuadro Barcelona, 2026-11-11)
+- Crudo: 1:38, 4K HEVC vertical 25 fps. Toma buena 0:39–0:95. Sin música/SFX (carpeta de audios vacía).
+- A (Claude: faster-whisper medium + render_clip.py): 52 s, 1080x1920, 12 segmentos, zooms 1.0/1.15/1.35,
+  subtítulos 3 palabras con palabras clave en color, -15.6 LUFS.
+- B (Descript create_social_clips): 49 s, 720x1280 con marca de agua "descript" (plan actual),
+  subtítulos largos (3 líneas) con resaltado karaoke, no pudo colorear palabras clave, -17.8 LUFS, 27 créditos IA.
+- Proyecto Descript: https://web.descript.com/96708bb5-bb70-4751-8354-90d16ca2d2b8
+- Pendiente: veredicto del usuario.
+- Scripts nuevos: editor/scripts/transcribir.py, editor/scripts/render_clip.py (plan de ejemplo en editor/ejemplo_plan_como-combinar.json).
