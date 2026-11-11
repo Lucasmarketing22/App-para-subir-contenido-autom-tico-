@@ -50,3 +50,14 @@ Prueba comparativa: falta el clip crudo (1–3 min) y 3–5 referencias de estil
 - Proyecto Descript: https://web.descript.com/96708bb5-bb70-4751-8354-90d16ca2d2b8
 - Pendiente: veredicto del usuario.
 - Scripts nuevos: editor/scripts/transcribir.py, editor/scripts/render_clip.py (plan de ejemplo en editor/ejemplo_plan_como-combinar.json).
+
+## Versión 2 — "como combinar" (2026-11-11)
+- Decisiones del usuario: perfil aprobado tal cual (se ajusta con feedback del cliente); subtítulos medianos pero con estilo
+  (no "normales"), color de acento amarillo OK; SIN música: el usuario pone audio en tendencia al publicar;
+  seguir con edición propia (Descript descartado por marca de agua del plan gratis).
+- Multicámara Seedance (genhq-infinite-angle): bloqueado por créditos — Higgsfield plan gratis con 1,37 créditos; 6 s a 1080p = 96 créditos.
+  Mientras tanto: "cámaras" simuladas con recortes del 4K (W 1.0 / M 1.3 / C 1.55 descentrado), cambio cada 2–4 s.
+- v02: título gancho que se arma palabra a palabra ("¿BLANCO, TINTO / O NARANJA?"), subtítulos 2 palabras Inter Black itálica
+  con pop+giro, y=1390; tarjeta amarilla a pantalla completa "TODO DEPENDE DEL COLOR DEL PLATO"; copas de vino animadas
+  (blanco/tinto/naranja) junto a la cabeza; -14.7 LUFS. Scripts: render_clip.py (ampliado), graficos.py (nuevo).
+- Pendiente: feedback del usuario/cliente sobre v02.
