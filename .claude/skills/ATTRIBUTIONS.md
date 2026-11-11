@@ -45,3 +45,10 @@ Skill en portugués que guía a montar un flujo de edición de video propio (8 e
 iniciar/preparar, cortes, motion-mapa, assets, motion-render, cámara, sfx) y escribe
 las skills de cada etapa más una skill maestra. Solo archivos markdown, sin scripts.
 Licencia en `fluxo-de-edicao/LICENSE`. Añadida el 2026-11-10.
+
+## genhq-infinite-angle (GenHQ)
+
+`SKILL.md` tomado tal cual de un archivo compartido con el usuario en Google Drive (sin repo ni
+licencia indicada). Genera prompts de Seedance 2.5 (vía Higgsfield) para "multicámara" a partir
+de un video de un solo ángulo. El script `scripts/extract_frames.sh` que menciona no venía incluido:
+se reescribió aquí con FFmpeg (mismo uso y mismo formato de nombres `t_SS.ss.jpg`). Añadida el 2026-11-11.

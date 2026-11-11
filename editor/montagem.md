@@ -9,12 +9,12 @@ Fase atual: 2 (entrevista) · Atualizado em 2026-11-10
   (skills en `.claude/skills/`, herramientas/perfil/scripts en `editor/`).
 - Conectores disponibles: ElevenLabs (transcripción), Google Drive (entrada/entrega),
   Upload-Post (publicación automática), HyperFrames (motion, ya en el repo), Higgsfield/Canva.
-- Instalado en esta montagem: nada todavía.
+- Instalado en esta montagem: skill genhq-infinite-angle (+ script extract_frames.sh probado).
 
 ## Decisiones
 - Revisión: video terminado (sin programa de edición). Render en la nube y ajustes por chat.
 - Objetivo: edición lo más automática posible; luego entrega a clientes y/o publicación automática.
-- Tipo y formato: marca personal (persona hablando a cámara). ENTRADA: videos completos en crudo (largos) de la empresa. SALIDA: videos cortos (clips de los mejores momentos) como entrega de prueba para el cliente. Formatos: vertical 9:16 (y horizontal 16:9 para YouTube si se pide).
+- Tipo y formato: marca personal (persona hablando a cámara). ENTRADA: videos completos en crudo de la empresa. SALIDA: clips cortos SOLO VERTICAL 9:16, ~60 s cada uno como referencia; cantidad y duración las decide Claude según el material (se corrige con feedback). Prioridad absoluta: calidad, nada mal editado.
 - Cliente: el material crudo lo envía la empresa que contrata; los videos son para ella (un perfil de estilo por cliente).
 - Editor: todo pasa por Claude. Prueba comparativa con el mismo clip crudo: (A) edición propia
   FFmpeg + HyperFrames vs. (B) Descript (conector conectado y verificado el 2026-11-10; Agent Underlord edita por instrucciones; exporta FCPXML/Premiere/DaVinci XML; publica con enlace de descarga). Se elige el mejor o un híbrido.
@@ -39,4 +39,4 @@ Fase atual: 2 (entrevista) · Atualizado em 2026-11-10
 - [ ] regras comuns
 
 ## Próximo passo
-Prueba comparativa: falta el clip crudo (1–3 min) y 3–5 referencias de estilo. Pendiente: cuántos clips por video, duración y formatos.
+Prueba comparativa: falta el clip crudo (1–3 min) y 3–5 referencias de estilo. Skill genhq-infinite-angle instalada (multicámara opcional vía Higgsfield/Seedance).
