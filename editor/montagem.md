@@ -64,3 +64,13 @@ Prueba comparativa: falta el clip crudo (1–3 min) y 3–5 referencias de estil
 - Motion graphics: HyperFrames CLI v0.9.31 funciona en la nube (npx). Recorte de persona para "texto detrás": editor/scripts/recortar_persona.py
   (MediaPipe selfie_multiclass, requiere `apt-get install libegl1 libgles2` y el modelo en ~/.models). Maquetas de 2 estilos
   (A editorial crema/serif, B llamativo amarillo/negro) en editor/maquetas y perfis/marca-personal/analises/ejemplos_estilos.png. Pendiente elección.
+
+## Versión 3 — estilo A editorial elegido por el usuario (2026-11-11)
+- Motion graphics propios: editor/motion/editorial.html (piezas hook, card, full, summary; deterministas con render(t))
+  + editor/motion/render_motion.js (Playwright -> PNG -> MOV qtrle con alfa).
+- Texto detrás de la persona: editor/scripts/mascara_persona.py genera la máscara por frame; render_clip.py acepta
+  overlays con "matte". REUSE_SEGS=1 reutiliza segmentos ya renderizados.
+- Subtítulos: Liberation Serif negrita 86 px, y=1250, palabras clave en color. Sin música (la pone el usuario).
+- v03: gancho editorial detrás de la persona, pantalla "color del plato" con plato que cambia de color, 5 tarjetas
+  de maridaje numeradas, resumen "Color del plato = color del vino". -14.7 LUFS.
+- Pendiente: feedback del usuario.

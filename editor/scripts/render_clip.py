@@ -15,7 +15,7 @@ Plan:
 Audio: pasa-altos + reducción de ruido suave + loudnorm en 2 pasadas a -14 LUFS / -1.5 dBTP.
 Cada segmento se renderiza aparte (decodificar 4K en muchas ramas a la vez agota la memoria).
 """
-import json, re, subprocess, sys, unicodedata
+import json, os, re, subprocess, sys, unicodedata
 from pathlib import Path
 
 plan = json.load(open(sys.argv[1]))
@@ -54,6 +54,8 @@ for i, sg in enumerate(segs):
     if nxt is None or nxt.get("join", "cut") == "cut":
         fades.append(f"afade=t=out:st={max(d - 0.015, 0):.3f}:d=0.015")
     f = work / f"seg_{i:02d}.mkv"
+    if os.environ.get("REUSE_SEGS") == "1" and f.exists():
+        seg_files.append(f); continue
     subprocess.run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-ss", f"{sg['s']:.3f}", "-i", src,
                     "-t", f"{d:.3f}", "-vf", f"crop={cw}:{ch}:{cx}:{cy},scale={W}:{H}:flags=lanczos,fps={FPS},setsar=1",
                     "-af", ",".join(fades) if fades else "anull", "-c:v", "libx264", "-preset", "fast", "-crf", "10",
@@ -162,7 +164,19 @@ for ov in plan.get("overlays", []):
         continue
     n_ov += 1
     inputs += ["-itsoffset", f"{t:.3f}", "-i", ov["file"]]
-    fc.append(f"[{last}][{n_ov}:v]overlay=x={ov.get('x', 0)}:y={ov.get('y', 0)}:eof_action=pass:format=auto[b{n_ov}]")
+    if ov.get("matte"):
+        # Gráfico DETRÁS de la persona: se pinta el gráfico y luego se vuelve a poner encima
+        # la persona recortada (mismos píxeles del fondo + máscara). Tras el fin de la máscara
+        # se repite el último frame, pero como son los mismos píxeles de la base no se nota.
+        n_ov += 1
+        inputs += ["-itsoffset", f"{t:.3f}", "-i", ov["matte"]]
+        fc.append(f"[{last}]split[sa{n_ov}][sb{n_ov}]")
+        fc.append(f"[sa{n_ov}][{n_ov - 1}:v]overlay=eof_action=pass:format=auto[g{n_ov}]")
+        fc.append(f"[{n_ov}:v]format=gray,scale={W}:{H}[m{n_ov}]")
+        fc.append(f"[sb{n_ov}][m{n_ov}]alphamerge[p{n_ov}]")
+        fc.append(f"[g{n_ov}][p{n_ov}]overlay=format=auto[b{n_ov}]")
+    else:
+        fc.append(f"[{last}][{n_ov}:v]overlay=x={ov.get('x', 0)}:y={ov.get('y', 0)}:eof_action=pass:format=auto[b{n_ov}]")
     last = f"b{n_ov}"
 fc.append(f"[{last}]subtitles={ass.as_posix()}[vout]")
 cmd = ["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", *inputs,
