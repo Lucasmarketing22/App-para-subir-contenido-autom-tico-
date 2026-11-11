@@ -52,3 +52,9 @@ Licencia en `fluxo-de-edicao/LICENSE`. Añadida el 2026-11-10.
 licencia indicada). Genera prompts de Seedance 2.5 (vía Higgsfield) para "multicámara" a partir
 de un video de un solo ángulo. El script `scripts/extract_frames.sh` que menciona no venía incluido:
 se reescribió aquí con FFmpeg (mismo uso y mismo formato de nombres `t_SS.ss.jpg`). Añadida el 2026-11-11.
+
+## launch-motion (@sanjii, Higgsfield)
+
+Descargada del zip enlazado en el artículo "How to Make SaaS Launch Videos With Claude: Motion Skill + Prompts"
+(higgsfield.ai/@sanjii/blogs/...). Sin licencia indicada. Solo markdown (SKILL.md + 3 plantillas en references/).
+Reglas de motion tipo After Effects para videos de lanzamiento en código (Remotion por defecto). Añadida el 2026-11-11.
