@@ -61,3 +61,6 @@ Prueba comparativa: falta el clip crudo (1–3 min) y 3–5 referencias de estil
   con pop+giro, y=1390; tarjeta amarilla a pantalla completa "TODO DEPENDE DEL COLOR DEL PLATO"; copas de vino animadas
   (blanco/tinto/naranja) junto a la cabeza; -14.7 LUFS. Scripts: render_clip.py (ampliado), graficos.py (nuevo).
 - Pendiente: feedback del usuario/cliente sobre v02.
+- Motion graphics: HyperFrames CLI v0.9.31 funciona en la nube (npx). Recorte de persona para "texto detrás": editor/scripts/recortar_persona.py
+  (MediaPipe selfie_multiclass, requiere `apt-get install libegl1 libgles2` y el modelo en ~/.models). Maquetas de 2 estilos
+  (A editorial crema/serif, B llamativo amarillo/negro) en editor/maquetas y perfis/marca-personal/analises/ejemplos_estilos.png. Pendiente elección.

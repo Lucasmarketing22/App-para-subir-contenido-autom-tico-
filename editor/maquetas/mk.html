@@ -1,0 +1,39 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1080px;height:1920px;position:relative;overflow:hidden;font-family:Inter}
+.bg,.fg{position:absolute;inset:0;width:1080px;height:1920px}
+.layer{position:absolute;inset:0}
+/* EDITORIAL */
+.ed-hook{position:absolute;top:250px;width:100%;text-align:center;color:#F6EEDF;font-family:'Liberation Serif',serif;line-height:.86;text-shadow:0 6px 30px rgba(0,0,0,.35)}
+.ed-hook .l1{font-size:190px;font-weight:700}
+.ed-hook .l2{font-size:260px;font-style:italic;color:#C8243A}
+.ed-hook .l3{font-size:200px;font-weight:700}
+.ed-hook .l3 i{color:#F08A2E}
+.ed-kicker{position:absolute;top:150px;width:100%;text-align:center;font:600 30px Inter;letter-spacing:10px;color:#F6EEDF}
+.ed-card{position:absolute;left:70px;right:70px;bottom:330px;background:#F4ECDD;border-radius:28px;padding:40px 50px;display:flex;align-items:center;gap:34px;box-shadow:0 20px 60px rgba(0,0,0,.35)}
+.ed-num{font:italic 700 92px 'Liberation Serif';color:#C8243A}
+.ed-txt{flex:1;font-family:'Liberation Serif';color:#1d1a16}
+.ed-txt small{display:block;font:600 24px Inter;letter-spacing:6px;color:#8a7d6b;margin-bottom:6px}
+.ed-txt b{font-size:58px}.ed-txt em{font-size:58px;color:#B8932F}
+.swatch{width:110px;height:110px;border-radius:50%;background:#F1DC8E;border:6px solid #1d1a16}
+/* BOLD */
+.bd-hook{position:absolute;top:150px;width:100%;text-align:center;font-family:'Inter Display';font-weight:900;line-height:.82;letter-spacing:-6px;transform:scaleX(.82)}
+.bd-hook div{font-size:250px}
+.bd-hook .w1{color:#FFE9A8}.bd-hook .w2{color:#FF2E4C}.bd-hook .w3{color:#FF8A1F}
+.bd-hook div{-webkit-text-stroke:0;text-shadow:0 10px 0 rgba(0,0,0,.25)}
+.bd-card{position:absolute;left:60px;right:60px;bottom:330px;background:#0E0E0E;border-radius:30px;padding:38px 44px;display:flex;align-items:center;gap:30px}
+.bd-num{width:120px;height:120px;border-radius:50%;background:#FFD400;color:#0E0E0E;font:900 76px Inter;display:flex;align-items:center;justify-content:center}
+.bd-txt{flex:1;color:#fff;font:900 52px Inter;line-height:1.05}
+.tag{display:table;background:#FF2E4C;color:#fff;font:800 24px Inter;letter-spacing:4px;padding:6px 14px;border-radius:8px;margin-bottom:12px}
+.bd-txt span{color:#FFD400}
+</style></head><body>
+<img class="bg" id="bg"><div class="layer" id="behind"></div><img class="fg" id="fg"><div class="layer" id="front"></div>
+<script>
+const v=new URLSearchParams(location.search).get('v');
+const pair=v.endsWith('pair'); const frame=pair?'f_pair':'f_hook';
+bg.src=frame+'.png'; fg.src=frame+'_person.png';
+if(v==='ed_hook'){behind.innerHTML='<div class="ed-hook"><div class="l1">¿Blanco,</div><div class="l2">tinto</div><div class="l3">o <i>naranja</i>?</div></div>';front.innerHTML='<div class="ed-kicker">MARIDAJE · EN 50 SEGUNDOS</div>';}
+if(v==='ed_pair'){fg.remove();front.innerHTML='<div class="ed-card"><div class="ed-num">01</div><div class="ed-txt"><small>SI PIDES</small><b>Pescado blanco</b><br><em>→ vino blanco</em></div><div class="swatch"></div></div>';}
+if(v==='bd_hook'){behind.innerHTML='<div class="bd-hook"><div class="w1">BLANCO</div><div class="w2">TINTO</div><div class="w3">NARANJA</div></div>';}
+if(v==='bd_pair'){fg.remove();front.innerHTML='<div class="bd-card"><div class="bd-num">1</div><div class="bd-txt"><div class="tag">MARIDAJE</div>PESCADO BLANCO<br><span>→ VINO BLANCO</span></div></div>';}
+</script></body></html>
