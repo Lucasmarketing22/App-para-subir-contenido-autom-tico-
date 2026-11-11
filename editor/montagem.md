@@ -30,7 +30,7 @@ Fase atual: 2 (entrevista) · Atualizado em 2026-11-10
 - Nomes: prefixo <…>; skill mestra /<…>
 
 ## Perfil
-- Referencias: Drive "INSPIRACION" = motion graphics (ya existe). El usuario creará una carpeta nueva de referencias de marca personal (sugerido: "INSPIRACION MARCA PERSONAL").
+- marca-personal: perfil inicial escrito el 2026-11-11 desde 6 refs (editor/perfis/marca-personal). Pendiente confirmación del usuario y color de marca del cliente.
 
 ## Fluxo aprovado
 <pendiente>
